@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Kanit;
+  src: url(Kanit/Kanit-SemiBold.ttf);
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+  .passage.text {
+    width: 90% !important;
+  }
+  body {
+    width: 100%;
+  }
+  #passages{
+      display: flex;
+      justify-content: center;
+  }
+}
+@media (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+  .passage.text {
+    width: 40% !important;
+  }
+  body {
+    width: 60%;
+  }
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: Kanit;
+}
+
+/*.macro-timed-insert{
+      display: none;
+  }*/
+.macro-linkappend {
+  float: right;
+}
+a {
+  float: right;
+}
