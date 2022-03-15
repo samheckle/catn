@@ -9,6 +9,15 @@ const api = new snoowrap({
   refreshToken: process.env.USER_REFRESH,
 });
 
-let test = api.getSubreddit('TwoSentenceHorror')
+let titles = []
+let bodies = []
 
-console.log(test)
+api.getSubreddit('TwoSentenceHorror').getHot().then(posts => {
+  return posts.map(post => {
+      titles.push(post.title)
+      bodies.push(post.selftext)
+  })
+  // console.log(titles)
+}).finally(f => {
+  console.log(titles[Math.floor(Math.random()*titles.length)],'\n\n', bodies[Math.floor(Math.random()*bodies.length)])
+})
